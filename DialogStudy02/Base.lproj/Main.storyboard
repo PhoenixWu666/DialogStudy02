@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DialogStudy02" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a5o-R8-5YH">
+                                <rect key="frame" x="10" y="40" width="355" height="134.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="入力してください" textAlignment="natural" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="U8Q-YV-dTo">
+                                <rect key="frame" x="20" y="214.5" width="335" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="go" enablesReturnKeyAutomatically="YES" smartInsertDeleteType="no"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l1M-6e-YDe">
+                                <rect key="frame" x="50" y="309.5" width="275" height="30"/>
+                                <color key="backgroundColor" red="0.92065145380000002" green="0.9297668147" blue="0.9297668147" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="送信">
+                                    <color key="titleShadowColor" red="0.2787981927" green="0.26724293830000001" blue="0.22958457469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendMsg:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BbP-KJ-cAx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="U8Q-YV-dTo" secondAttribute="trailing" constant="20" id="HQH-Ro-FjP"/>
+                            <constraint firstItem="a5o-R8-5YH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Kh6-kr-j0b"/>
+                            <constraint firstItem="a5o-R8-5YH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Q6o-35-igr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="l1M-6e-YDe" secondAttribute="trailing" constant="50" id="UAd-nD-u2z"/>
+                            <constraint firstItem="U8Q-YV-dTo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="UCX-eA-sez"/>
+                            <constraint firstItem="U8Q-YV-dTo" firstAttribute="top" secondItem="a5o-R8-5YH" secondAttribute="bottom" constant="40" id="fUZ-h4-kAq"/>
+                            <constraint firstItem="a5o-R8-5YH" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.2" constant="1" id="kz2-Iw-BtU"/>
+                            <constraint firstItem="l1M-6e-YDe" firstAttribute="top" secondItem="U8Q-YV-dTo" secondAttribute="bottom" constant="65" id="nVC-Ec-uy9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="a5o-R8-5YH" secondAttribute="trailing" constant="10" id="yeA-qT-0XN"/>
+                            <constraint firstItem="l1M-6e-YDe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="ymk-hJ-xcY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="msgField" destination="U8Q-YV-dTo" id="ddU-vw-QMD"/>
+                        <outlet property="responseLbl" destination="a5o-R8-5YH" id="d78-Ls-LrK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
