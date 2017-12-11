@@ -22,6 +22,9 @@ class ViewController: UIViewController {
     // ユーザー入力
     @IBOutlet weak var msgField: UITextField!
     
+    /// サーバーから返事内容を示し、スピーチする
+    ///
+    /// - Parameter text: サーバーから返事内容
     func speechAndText(text: String) {
         let speechUtterance = AVSpeechUtterance(string: text)
         speechSynthesizer.speak(speechUtterance)
@@ -39,6 +42,7 @@ class ViewController: UIViewController {
                 request, response in
                 
                 if let resp = response as? AIResponse, let txtResp = resp.result.fulfillment.messages[0]["speech"] as? String {
+                    // messages の詳しい内容をコンソールで示す
                     print(resp.result.fulfillment.messages)
                     self.speechAndText(text: txtResp)
                 }
